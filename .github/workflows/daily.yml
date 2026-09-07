@@ -1,0 +1,41 @@
+name: daily-jobs
+
+on:
+  schedule:
+    # 每天 08:00 CST = 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps (optional, stdlib-first)
+        run: pip install -r requirements.txt || echo "no extra deps, continue with stdlib"
+
+      - name: Run watcher
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+        run: python watcher.py
+
+      - name: Commit updated jobs
+        run: |
+          git config user.name "jobs-bot"
+          git config user.email "jobs-bot@users.noreply.github.com"
+          git add jobs.md jobs.csv || true
+          git diff --cached --quiet || git commit -m "chore: daily jobs update $(date +%F)"
+          git push || echo "nothing to push"

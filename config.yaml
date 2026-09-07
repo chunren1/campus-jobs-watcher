@@ -1,0 +1,36 @@
+# campus-jobs-watcher 配置：改这里即可调整监控范围，无需改代码
+keywords:
+  - "SRE"
+  - "运维"
+  - "DevOps"
+  - "系统工程师"
+  - "云平台"
+  - "智能运维"
+  - "应用运维"
+  - "运维开发"
+  - "运维研发"
+
+# 目标城市：留空 [] 表示不限；填了则优先按城市过滤/排序
+cities:
+  - "深圳"
+  - "杭州"
+  - "成都"
+  - "上海"
+  - "北京"
+  - "武汉"
+
+# 数据源：27届秋招信息汇总（README 表格），连不上自动降级用内置 seeds
+sources:
+  - "https://raw.githubusercontent.com/xixicc186/xixicc2027/main/README.md"
+  - "https://raw.githubusercontent.com/xixicc186/xixicc2027/master/README.md"
+
+email:
+  subject_prefix: "[27届SRE/运维秋招]"
+  # 发件人/收件人走环境变量，不进配置文件：
+  # SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS / MAIL_TO (+可选 MAIL_FROM)
+
+output:
+  md: "jobs.md"
+  csv: "jobs.csv"
+
+fetch_timeout_sec: 15
