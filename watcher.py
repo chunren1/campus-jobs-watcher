@@ -31,7 +31,7 @@ SEEDS = [
         "start": "2026-08-24",
         "headcount": "多名",
         "requirement": "本科及以上；Java/Python/Go 任一 + Linux + Docker/K8s 基础",
-        "link": "https://ctrip.zhaopin.com/",
+        "link": "https://careers.ctrip.com/",
         "source": "seed",
     },
     {
@@ -42,7 +42,7 @@ SEEDS = [
         "start": "",
         "headcount": "150人",
         "requirement": "本科及以上 STEM 相关专业；Linux/Python/自动化运维方向优先",
-        "link": "https://cmbnt.zhaopin.com/",
+        "link": "https://cmbnt.cmbchina.com/",
         "source": "seed",
     },
     {
@@ -53,7 +53,7 @@ SEEDS = [
         "start": "",
         "headcount": "30人",
         "requirement": "本科及以上；CET4 425+；Linux/数据库/云原生基础",
-        "link": "https://career.ccbft.com/",
+        "link": "https://job.ccb.com/",
         "source": "seed",
     },
     {
@@ -75,7 +75,7 @@ SEEDS = [
         "start": "",
         "headcount": "多名",
         "requirement": "本科及以上；Linux/Java 应用运维 / 云平台（SaaS）运维基础",
-        "link": "https://www.beisen.com/careers",
+        "link": "https://beisen.zhiye.com/campus/jobs",
         "source": "seed",
     },
     {
@@ -86,7 +86,7 @@ SEEDS = [
         "start": "",
         "headcount": "多名",
         "requirement": "本科及以上；Python/Go + DevOps 工具链 / 运维开发经验优先",
-        "link": "https://job.pingan.com/",
+        "link": "https://campus.pingan.com/pab",
         "source": "seed",
     },
 ]
