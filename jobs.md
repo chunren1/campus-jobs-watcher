@@ -1,4 +1,4 @@
-# 27届 SRE / 运维岗秋招监控（2026-09-23 更新）
+# 27届 SRE / 运维岗秋招监控（2026-09-24 更新）
 
 - 共 **9** 条（内置兜底 6 条 + 实时抓取 3 条）
 - 实时源：`https://raw.githubusercontent.com/xixicc186/xixicc2027/main/README.md`
